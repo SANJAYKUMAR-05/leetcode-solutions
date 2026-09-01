@@ -3,7 +3,7 @@
 // Language: cpp
 // Link: https://leetcode.com/problems/kth-smallest-element-in-a-bst/
 // Synced by: LinkCode
-// Date: 9/1/2026, 4:38:39 PM
+// Date: 9/1/2026, 4:48:41 PM
 // ======================================
 
 
@@ -29,9 +29,14 @@ public:
         }
         func(root->left,k,count);
         count++;
+        if(ans != -1)
+        {
+            return;
+        }
         if(k == count)
         {
             ans = root->val;
+            return;
         }
         func(root->right,k,count);
     }
