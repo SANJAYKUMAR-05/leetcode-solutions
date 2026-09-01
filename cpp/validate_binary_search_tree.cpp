@@ -3,7 +3,7 @@
 // Language: cpp
 // Link: https://leetcode.com/problems/validate-binary-search-tree/
 // Synced by: LinkCode
-// Date: 9/1/2026, 9:14:40 PM
+// Date: 9/1/2026, 9:15:18 PM
 // ======================================
 
 
@@ -20,7 +20,7 @@
  */
 class Solution {
 public:
-    bool func(TreeNode* root,int st,int end)
+    bool func(TreeNode* root,long long st,long long end)
     {
         if(root == NULL)
         {
@@ -33,6 +33,6 @@ public:
         return (func(root->left,st,root->val) && func(root->right,root->val,end));
     }
     bool isValidBST(TreeNode* root) {
-        return func(root,INT_MIN,INT_MAX);
+        return func(root,LLONG_MIN,LLONG_MAX);
     }
 };
