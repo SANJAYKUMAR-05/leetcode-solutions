@@ -3,7 +3,7 @@
 // Language: cpp
 // Link: https://leetcode.com/problems/majority-element-ii/
 // Synced by: LinkCode
-// Date: 8/25/2026, 2:29:59 PM
+// Date: 10/29/2026, 10:49:52 PM
 // ======================================
 
 
