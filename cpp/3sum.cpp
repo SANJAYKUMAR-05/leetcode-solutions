@@ -3,7 +3,7 @@
 // Language: cpp
 // Link: https://leetcode.com/problems/3sum/
 // Synced by: LinkCode
-// Date: 8/30/2026, 11:31:28 PM
+// Date: 10/29/2026, 11:41:42 PM
 // ======================================
 
 
@@ -31,8 +31,7 @@ public:
                     right--;
                  while (left < right && nums[left] == nums[left - 1])
                         left++;
-
-                while (left < right && nums[right] == nums[right + 1])
+                 while (left < right && nums[right] == nums[right + 1])
                         right--;
                 }
                 else if(sum > 0)
