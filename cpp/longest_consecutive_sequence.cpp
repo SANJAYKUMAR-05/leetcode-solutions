@@ -3,34 +3,33 @@
 // Language: cpp
 // Link: https://leetcode.com/problems/longest-consecutive-sequence/
 // Synced by: LinkCode
-// Date: 10/30/2026, 1:05:07 PM
+// Date: 10/30/2026, 1:05:21 PM
 // ======================================
 
 
 class Solution {
 public:
     int longestConsecutive(vector<int>& nums) {
-        unordered_set<int> st;
-        for(int num : nums)
+        int n = nums.size();
+        unordered_set<int> numset(nums.begin(),nums.end());
+        int longest = 0;
+        for(int num : numset)
         {
-            st.insert(num);
-        }
-        int maxi = 0;
-        for(int curr : nums)
-        {
-            int longest = 1;
-            int start = curr - 1;
-            if(st.find(start) == st.end())
+            if(numset.find(num-1) == numset.end())
             {
-                int n = curr;
-                while(st.find(n+1) != st.end())
+                int current = num;
+                int streak = 1;
+                while(numset.find(current+1)!=numset.end())
                 {
-                    n++;
-                    longest++;
+                    current = current + 1;
+                    streak = streak + 1;
+                }
+                if(streak > longest)
+                {
+                    longest = streak;
                 }
             }
-            maxi = max(maxi,longest);
-        }
-        return maxi;
+        } 
+        return longest;
     }
 };
