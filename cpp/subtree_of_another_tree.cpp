@@ -3,7 +3,7 @@
 // Language: cpp
 // Link: https://leetcode.com/problems/subtree-of-another-tree/
 // Synced by: LinkCode
-// Date: 11/11/2026, 11:47:04 PM
+// Date: 11/11/2026, 11:47:21 PM
 // ======================================
 
 
@@ -20,14 +20,19 @@
  */
 class Solution {
 public:
-    bool same(TreeNode* root, TreeNode* subRoot)
+    bool sameTree(TreeNode* a,TreeNode* b)
     {
-        if(root == NULL && subRoot == NULL) return true;
-        if(root == NULL || subRoot == NULL) return false;
-        return ((root->val == subRoot->val) && same(root->left,subRoot->left) && same(root->right,subRoot->right));
+        if(!a && !b) return true;
+        else if(!a || !b) return false;
+        return (a->val == b->val && 
+        sameTree(a->left,b->left) && 
+        sameTree(a->right,b->right));
     }
     bool isSubtree(TreeNode* root, TreeNode* subRoot) {
-        if(root == NULL)return false;
-        return same(root->left,subRoot) || same(root->right,subRoot);
+        if(subRoot == NULL)return true;
+        if(root == NULL) return false;
+        
+        if(sameTree(root,subRoot)) return true;
+        return isSubtree(root->left,subRoot) || isSubtree(root->right,subRoot);
     }
 };
