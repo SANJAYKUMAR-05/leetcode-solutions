@@ -3,7 +3,7 @@
 // Language: cpp
 // Link: https://leetcode.com/problems/minimum-depth-of-binary-tree/
 // Synced by: LinkCode
-// Date: 11/11/2026, 11:20:53 PM
+// Date: 11/11/2026, 11:22:07 PM
 // ======================================
 
 
@@ -28,13 +28,9 @@ public:
         int left = minDepth(root->left);
         int right = minDepth(root->right);
         int ans =  min(left,right) + 1;
-        if(ans == 1)
-        {
-            return max(left,right) + 1;
-        }
-        else
-        {
-            return ans;
-        }
+        if(left == 0 || right == 0)
+            return max(left, right) + 1;
+
+        return min(left, right) + 1;
     }
 };
