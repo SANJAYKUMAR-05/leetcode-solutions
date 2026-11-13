@@ -3,7 +3,7 @@
 // Language: cpp
 // Link: https://leetcode.com/problems/insert-into-a-binary-search-tree/
 // Synced by: LinkCode
-// Date: 8/31/2026, 11:40:05 PM
+// Date: 11/13/2026, 3:31:53 PM
 // ======================================
 
 
