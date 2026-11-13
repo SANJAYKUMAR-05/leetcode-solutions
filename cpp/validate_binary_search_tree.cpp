@@ -3,7 +3,7 @@
 // Language: cpp
 // Link: https://leetcode.com/problems/validate-binary-search-tree/
 // Synced by: LinkCode
-// Date: 9/1/2026, 9:15:18 PM
+// Date: 11/13/2026, 3:34:11 PM
 // ======================================
 
 
