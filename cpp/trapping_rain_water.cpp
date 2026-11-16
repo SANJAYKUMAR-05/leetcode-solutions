@@ -3,7 +3,7 @@
 // Language: cpp
 // Link: https://leetcode.com/problems/trapping-rain-water/
 // Synced by: LinkCode
-// Date: 11/16/2026, 10:04:51 PM
+// Date: 11/16/2026, 10:35:41 PM
 // ======================================
 
 
@@ -11,8 +11,8 @@ class Solution {
 public:
     int trap(vector<int>& height) {
         int n = height.size();
-        int left = 0, right = n - 1;
-        int leftMax = 0, rightMax = 0;
+        int left = 0,right = n -1;
+        int leftMax = 0,rightMax = 0;
         int ans = 0;
         while(left <= right)
         {
@@ -24,7 +24,7 @@ public:
                 }
                 else
                 {
-                    ans = ans + (leftMax - height[left]);
+                    ans += (leftMax - height[left]);
                 }
                 left++;
             }
@@ -36,7 +36,7 @@ public:
                 }
                 else
                 {
-                    ans = ans + (rightMax - height[right]);
+                    ans += (rightMax - height[right]);
                 }
                 right--;
             }
