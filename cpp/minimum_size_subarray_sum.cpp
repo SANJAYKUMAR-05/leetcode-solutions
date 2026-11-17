@@ -3,7 +3,7 @@
 // Language: cpp
 // Link: https://leetcode.com/problems/minimum-size-subarray-sum/
 // Synced by: LinkCode
-// Date: 11/17/2026, 1:36:28 PM
+// Date: 11/17/2026, 1:36:58 PM
 // ======================================
 
 
@@ -20,6 +20,7 @@ public:
             while(sum > target)
             {
                 sum -= nums[left];
+                ans = min(ans,right - left + 1);
                 left++;
             }
             if(sum == target)
