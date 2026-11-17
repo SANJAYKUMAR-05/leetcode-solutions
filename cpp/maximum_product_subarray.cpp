@@ -3,7 +3,7 @@
 // Language: cpp
 // Link: https://leetcode.com/problems/maximum-product-subarray/
 // Synced by: LinkCode
-// Date: 8/31/2026, 4:51:59 PM
+// Date: 11/17/2026, 2:26:03 PM
 // ======================================
 
 
